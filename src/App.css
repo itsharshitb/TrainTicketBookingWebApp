@@ -1,0 +1,90 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.flex-display-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.left-side,
+.right-side,
+.left-side-reset {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-right: 10px;
+}
+
+.left-side-reset {
+  border: 1px solid #ff0000;
+}
+
+input {
+  padding: 0.5rem;
+}
+
+.left-side,
+.left-side-reset {
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.left-side,
+.left-side-reset {
+  max-width: 200px;
+  height: auto; /* Adjusts to fit content */
+  max-height: 200px; /* Optional: limit max height if needed */
+  overflow-y: auto; /* Adds scroll if content exceeds max height */
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-right: 10px;
+}
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.seat-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 40px); /* Default 7 seats per row */
+  grid-template-rows: repeat(10, 40px) 40px; /* 10 rows of 7 seats, 1 row of 3 seats */
+  gap: 8px;
+}
+
+.seat {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #333;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  background-color: #008325; /* Light green for available seats */
+}
+
+.booked {
+  background-color: #a10300; /* Light red for booked seats */
+}
+
+.last-row {
+  grid-column: span 3; /* Spans only 3 columns for the last row */
+}
