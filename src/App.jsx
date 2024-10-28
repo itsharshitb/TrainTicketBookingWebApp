@@ -5,7 +5,7 @@ import axios from "axios";
 const App = () => {
   const [seats, setSeats] = useState(Array(80).fill(false)); // false indicates seat availability
   const [seatCount, setSeatCount] = useState(""); // State for input value
-  const api = "http://localhost:8080/api/seats";
+  const api = "http://54.196.117.241:8080/api/seats";
 
   // Fetch seat availability from backend when the component loads
   useEffect(() => {
